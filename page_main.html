@@ -7,6 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="custom_styles.css">
     <link rel="stylesheet" href="custom_fonts.css">
+    <link rel="stylesheet" href="custom_anim.css">
+    <script src="static/js/jquery-3.6.1.min.js"></script>
+    <script src="custom_script.js"></script>
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -34,11 +37,172 @@
             <path d="M12 15L7 10H17L12 15Z" fill="black"/>         
         </symbol>
     </svg>
+
+    <!-- Icon cube -->
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon__cube" width="160" height="160" viewBox="0 0 160 160">
+            <g class="--cube-icon-backcube">
+                <rect x="20" y="20" width="110" height="110" rx="20" fill="url(#paint0_radial_80_116)"/>
+                <rect x="20.5" y="20.5" width="109" height="109" rx="19.5" stroke="white" stroke-opacity="0.6" style="mix-blend-mode:lighten"/>
+            </g>
+            
+            <g class="--cube-icon-frontcube">
+                <rect x="30" y="30" width="110" height="110" rx="20" fill="url(#paint1_linear_80_116)"/>
+                <rect x="31" y="31" width="110" height="110" rx="20" fill="url(#paint1_linear_80_116)" stroke="url(#paint2_linear_80_116)"/>
+
+                <rect x="61.2134" y="64" width="10" height="30" rx="2" transform="rotate(45 61.2134 64)" fill="white"/>
+                <rect x="100" y="80" width="10" height="30" rx="2" transform="rotate(90 100 80)" fill="white"/>
+                <rect x="68.2847" y="99.3552" width="10" height="30" rx="2" transform="rotate(135 68.2847 99.3552)" fill="white"/>
+                <rect x="109.071" y="106.426" width="10" height="30" rx="2" transform="rotate(-135 109.071 106.426)" fill="white"/>
+                <rect x="102" y="71.071" width="10" height="30" rx="2" transform="rotate(-45 102 71.071)" fill="white"/>
+            </g>
+
+            <defs>
+
+                <radialGradient id="paint0_radial_80_116" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 20) rotate(45) scale(155.563)">
+                    <stop stop-color="#27AEA6"/>
+                    <stop offset="1" stop-color="#60DD95"/>
+                </radialGradient>
+
+                <linearGradient id="paint1_linear_80_116" x1="85" y1="30" x2="85" y2="140" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EEEEEE" stop-opacity="0.7"/>
+                    <stop offset="1" stop-color="#EEEEEE" stop-opacity="0.3"/>
+                </linearGradient>
+
+                <linearGradient id="paint2_linear_80_116" x1="80" y1="40" x2="80" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+        </symbol>
+    </svg> 
+  
+    <!-- &&&&&&&&& -->
+
+    <!-- Icon Gear -->
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon__gear" width="160" height="160" viewBox="0 0 160 160">
+
+            <path class="--gear-icon-back" d="M71.4286 22C71.4286 20.8954 72.324 20 73.4286 20H86.5714C87.676 20 88.5714 20.8954 88.5714 22V27.5901C88.5714 28.567 89.2782 29.3967 90.2358 29.5901C96.8384 30.9235 102.983 33.5216 108.405 37.1208C109.219 37.6609 110.305 37.5736 110.995 36.8831L114.951 32.9269C115.732 32.1459 116.999 32.1459 117.78 32.9269L127.073 42.2203C127.854 43.0014 127.854 44.2677 127.073 45.0488L123.117 49.0049C122.426 49.6955 122.339 50.7815 122.879 51.5951C126.478 57.0174 129.077 63.1616 130.41 69.7642C130.603 70.7218 131.433 71.4286 132.41 71.4286H138C139.105 71.4286 140 72.324 140 73.4286V86.5714C140 87.676 139.105 88.5714 138 88.5714H132.41C131.433 88.5714 130.603 89.2782 130.41 90.2358C129.077 96.8383 126.478 102.983 122.879 108.405C122.339 109.218 122.427 110.304 123.117 110.995L127.073 114.951C127.854 115.732 127.854 116.999 127.073 117.78L117.78 127.073C116.999 127.854 115.732 127.854 114.951 127.073L110.995 123.117C110.305 122.426 109.219 122.339 108.405 122.879C102.983 126.478 96.8385 129.076 90.2358 130.41C89.2782 130.603 88.5714 131.433 88.5714 132.41V138C88.5714 139.105 87.676 140 86.5714 140H73.4286C72.324 140 71.4286 139.105 71.4286 138V132.41C71.4286 131.433 70.7218 130.603 69.7642 130.41C63.1616 129.077 57.0174 126.478 51.5951 122.879C50.7815 122.339 49.6955 122.426 49.005 123.117L45.0488 127.073C44.2678 127.854 43.0015 127.854 42.2204 127.073L32.927 117.78C32.146 116.999 32.146 115.732 32.927 114.951L36.8831 110.995C37.5737 110.305 37.6609 109.219 37.1208 108.405C33.5216 102.983 30.9235 96.8384 29.5901 90.2358C29.3967 89.2782 28.567 88.5714 27.5901 88.5714H22C20.8954 88.5714 20 87.676 20 86.5714V73.4286C20 72.324 20.8954 71.4286 22 71.4286H27.5901C28.567 71.4286 29.3967 70.7218 29.5901 69.7642C30.9235 63.1615 33.5217 57.0172 37.1208 51.5949C37.6609 50.7812 37.5737 49.6953 36.8831 49.0047L32.927 45.0486C32.146 44.2676 32.146 43.0013 32.927 42.2202L42.2205 32.9268C43.0015 32.1458 44.2678 32.1458 45.0489 32.9268L49.005 36.8829C49.6956 37.5735 50.7815 37.6607 51.5952 37.1207C57.0174 33.5216 63.1617 30.9235 69.7642 29.5901C70.7218 29.3967 71.4286 28.567 71.4286 27.5901V22Z" fill="url(#paint0_radial_80_3)"/>
+            
+            <rect x="40.5" y="40.5" width="79" height="79" rx="39.5" fill="url(#paint1_linear_80_3)" stroke="url(#paint2_linear_80_3)"/>
+            
+            <g class="--gear-icon-gear-main">
+                <rect x="90" y="70" width="20" height="20" rx="10" transform="rotate(90 90 70)" fill="white"/>
+                <path d="M50 80.0001C50 72.346 52.8665 65.3614 57.5844 60.0611C58.3189 59.2361 59.5908 59.2507 60.3654 60.0382L64.5728 64.3158C65.3474 65.1032 65.3281 66.3637 64.6215 67.2126C61.7357 70.6792 60 75.1369 60 80.0001C60 84.8038 61.6935 89.2119 64.5161 92.66C65.2158 93.5148 65.2247 94.7753 64.4436 95.5564L60.201 99.799C59.4199 100.58 58.148 100.584 57.4204 99.7532C52.8001 94.4761 50 87.5651 50 80.0001Z" fill="white"/>
+                <path d="M99.6347 99.9619C100.409 100.749 101.681 100.764 102.416 99.939C107.134 94.6388 110 87.6542 110 80.0001C110 72.4351 107.2 65.5241 102.58 60.2469C101.852 59.4159 100.58 59.4201 99.799 60.2011L95.5564 64.4438C94.7753 65.2248 94.7841 66.4854 95.4838 67.3401C98.3064 70.7882 100 75.1964 100 80.0001C100 84.8632 98.2643 89.321 95.3786 92.7876C94.6719 93.6365 94.6527 94.8969 95.4272 95.6844L99.6347 99.9619Z" fill="white"/>
+            </g>
+
+            <defs>
+                <radialGradient id="paint0_radial_80_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 20) rotate(45) scale(169.706)">
+                    <stop stop-color="#65519E"/>
+                    <stop offset="1" stop-color="#CE8FFF"/>
+                </radialGradient>
+                <linearGradient id="paint1_linear_80_3" x1="80" y1="40" x2="80" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EEEEEE" stop-opacity="0.7"/>
+                    <stop offset="1" stop-color="#EEEEEE" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_80_3" x1="80" y1="40" x2="80" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+        </symbol>
+    </svg> 
+    <!--&&&&&&&&&&&-->
+
+    <!-- Icon Gear -->
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon__ellipse" width="160" height="160" viewBox="0 0 160 160">
+
+            <g class="--ellipse-icon-back">
+                <rect x="40" y="20" width="80" height="120" rx="40" fill="url(#paint0_radial_80_125)"/>
+                <rect x="40.5" y="20.5" width="79" height="119" rx="39.5" stroke="white" stroke-opacity="0.6" style="mix-blend-mode:lighten"/>
+            </g>
+
+    
+            
+            <rect x="20.5" y="50.5" width="119" height="59" rx="29.5" fill="url(#paint1_linear_80_125)" stroke="url(#paint2_linear_80_125)"/>
+            
+            <rect class="--ellipse-icon-main-minus" x="75" y="76" width="10" height="30" rx="2" fill="white"/>
+            <g class="--ellipse-icon-main-plus">
+                <rect x="115" y="76" width="10" height="30" rx="2" transform="rotate(90 115 76)" fill="white"/>
+                <rect x="95" y="66" width="10" height="30" rx="2" fill="white"/>
+            </g>
+            
+            <defs>
+                <radialGradient id="paint0_radial_80_125" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 20) rotate(56.3099) scale(144.222 133.128)">
+                    <stop stop-color="#0052CD"/>
+                    <stop offset="1" stop-color="#26E6F2"/>
+                </radialGradient>
+                <linearGradient id="paint1_linear_80_125" x1="80" y1="50" x2="80" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EEEEEE" stop-opacity="0.7"/>
+                    <stop offset="1" stop-color="#EEEEEE" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_80_125" x1="80" y1="50" x2="80" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+            </defs> 
+
+        </symbol>
+    </svg> 
+    <!--&&&&&&&&&&&-->
+
+    <!-- rhombus icon -->
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon__rhombus" width="160" height="160" viewBox="0 0 160 160">
+            
+            <g class="--rhombus-icon-back">
+                <path d="M69.7101 26.174C76.0437 22.3738 83.9563 22.3738 90.2899 26.174L120.29 44.174C126.314 47.7884 130 54.2986 130 61.3238V98.7727C130 105.746 126.368 112.215 120.415 115.847L90.4152 134.147C84.0197 138.048 75.9803 138.048 69.5848 134.147L39.5848 115.847C33.6319 112.215 30 105.746 30 98.7727V61.3238C30 54.2986 33.686 47.7884 39.7101 44.174L69.7101 26.174Z" fill="url(#paint0_radial_80_132)"/>
+                <path d="M69.9673 26.6027C76.1426 22.8975 83.8574 22.8975 90.0327 26.6027L120.033 44.6027C125.906 48.1268 129.5 54.4742 129.5 61.3238V98.7727C129.5 105.571 125.959 111.879 120.155 115.42L90.1548 133.72C83.9192 137.524 76.0808 137.524 69.8452 133.72L39.8452 115.42C34.0411 111.879 30.5 105.571 30.5 98.7727V61.3238C30.5 54.4742 34.0938 48.1268 39.9673 44.6027L69.9673 26.6027Z" stroke="white" stroke-opacity="0.6" style="mix-blend-mode:lighten"/>
+            </g>
+            
+            <rect x="31.7071" y="79.5686" width="69" height="69" rx="19.5" transform="rotate(-45 31.7071 79.5686)" fill="url(#paint1_linear_80_132)" stroke="url(#paint2_linear_80_132)"/>
+            
+            <rect class="--rhombus-icon-arrow-up" x="85" y="80" width="10" height="30" rx="2" transform="rotate(-180 85 80)" fill="white"/>
+            <rect class="--rhombus-icon-arrow-left" x="79.6353" y="71" width="10" height="29.601" rx="2" transform="rotate(60 79.6353 71)" fill="white"/>
+            <rect class="--rhombus-icon-arrow-right" x="105.584" y="86.27" width="9.48058" height="30.0902" rx="2" transform="rotate(120 105.584 86.27)" fill="white"/>
+           
+            <defs>
+                <radialGradient id="paint0_radial_80_132" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(130 141) rotate(-129.572) scale(156.975 156.974)">
+                    <stop stop-color="#E8EC1F"/>
+                    <stop offset="1" stop-color="#FCB345"/>
+                </radialGradient>
+
+                <linearGradient id="paint1_linear_80_132" x1="66" y1="79.5686" x2="66" y2="149.569" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EEEEEE" stop-opacity="0.7"/>
+                    <stop offset="1" stop-color="#EEEEEE" stop-opacity="0.3"/>
+                </linearGradient>
+
+                <linearGradient id="paint2_linear_80_132" x1="66" y1="79.5686" x2="66" y2="149.569" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+
+        </symbol>
+    </svg> 
+    <!--&&&&&&&&&&&&&&-->
+
+    <!-- Nav icon -->
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon__navmenu" width="48" height="48" viewBox="0 0 48 48">
+            <path d="M5.51953 36.7913V32.8305H42.4804V36.7913H5.51953ZM5.51953 25.9804V22.0195H42.4804V25.9804H5.51953ZM5.51953 15.1695V11.1804H42.4804V15.1695H5.51953Z" fill="#C60018"/>
+        </symbol>
+    </svg> 
+    <!-- &&&&&&&& -->
+
     <!-- &&&&& -->
 
-    <header class="header-conteinter flex content-space-between">
+    <header class="header-container flex content-space-between">
         <div class="flex align-center-v"> <!-- Left block - logo and menu -->
             <a href="/"><img draggable="false" src="static/logo.svg" alt="Логотип" class="logo"></a>
+            
+            <div class="nav-mobile">
+                <a><svg style="width: 48px; height: 48px;"><use xlink:href="#icon__navmenu"></use></svg></a>
+            </div>
+            
             <ul class="nav-menu flex"> <!-- Menu -->
                     <li><a href="javascript:void(0);" class=""> Каталог
                         <li><a href="javascript:void(0);" class=""> Услуги
@@ -48,6 +212,8 @@
                                         <li><a href="javascript:void(0);" class=""> Контакты </a></li>
             </ul>
         </div>
+
+    
 
         <div class="flex align-center-v"> <!-- Right block - lang and icons-->
             <div class="flex nav-lang align-center-v"> <!-- Lang -->
@@ -75,6 +241,115 @@
                 Научитесь проектировать, собирать и программировать настоящих роботов, применять машинное обучение и искусственный интеллект.
                 </p>
                 <button class="btn-red"> Записаться </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-2">
+        <div class="container">
+            <div class="flex card-block-tutorial content-space-between">
+                <div class="card-bt-item">
+                    <img draggable="false" src="static/page1/slide-bar1.jpg" alt="Рука робот">
+                    <div class="card-bt-info">
+                        <h1>Robot - Manipulator</h1>
+                        <span> 24 урока | 2 месяца </span>
+
+                        <ul>
+                            <li> 3D проектирование в SolidWorks
+                            <li> Печать на 3D принтере
+                            <li> Программирование Arduino
+                            <li> Разбор сенсоров и моторов
+                            <li> Проектируем робота-манипулятора
+                            <li> Кинематика
+                            <li> Обратная кинематика
+                            <li> Сборка работы, тесты и калибровка </li>
+                        </ul>
+                        
+                        <div style="width: 100%;" class="flex content-center">
+                            <button class="btn-white">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-bt-item">
+                    <img draggable="false" src="static/page1/slide-bar2.png" alt="Робот квадрацикл">
+                    <div class="card-bt-info">
+                        <h1>Robot - Manipulator</h1>
+                        <span> 24 урока | 2 месяца </span>
+
+                        <ul>
+                            <li> 3D проектирование в SolidWorks
+                            <li> Печать на 3D принтере
+                            <li> Программирование Arduino
+                            <li> Разбор сенсоров и моторов
+                            <li> Проектируем робота-манипулятора
+                            <li> Кинематика
+                            <li> Обратная кинематика
+                            <li> Сборка работы, тесты и калибровка </li>
+                        </ul>
+                        
+                        <div style="width: 100%;" class="flex content-center">
+                            <button class="btn-white">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-bt-item">
+                    <img draggable="false" src="static/page1/slide-bar1.jpg" alt="Опять рука робот">
+                    <div class="card-bt-info">
+                        <h1>Robot - Manipulator</h1>
+                        <span> 24 урока | 2 месяца </span>
+
+                        <ul>
+                            <li> 3D проектирование в SolidWorks
+                            <li> Печать на 3D принтере
+                            <li> Программирование Arduino
+                            <li> Разбор сенсоров и моторов
+                            <li> Проектируем робота-манипулятора
+                            <li> Кинематика
+                            <li> Обратная кинематика
+                            <li> Сборка работы, тесты и калибровка </li>
+                        </ul>
+                        
+                        <div style="width: 100%;" class="flex content-center">
+                            <button class="btn-white">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-3">
+        <div class="container">
+            <h1 class="txt-size-bg txt-font-regular align-center-h"> Приобритенные навыки </h1>
+            <div class="icon-adv-block flex content-space-between">
+                <div class="icon-adv-item flex-column">
+                    <svg style="width: 160px;"><use xlink:href="#icon__cube"></use></svg>   <!-- Cube background Icon -->
+                    <span> Программирование микроконтроллеров </span>
+                </div>
+                <div class="icon-adv-item">
+                    <svg style="width: 160px;"><use xlink:href="#icon__gear"></use></svg>   <!-- Cube background Icon -->
+                    <span> Знание работы сенсоров и моторов </span>
+                </div>
+                <div class="icon-adv-item">
+                    <svg style="width: 160px;"><use xlink:href="#icon__ellipse"></use></svg>    <!-- Cube background Icon -->
+                    <span> Построение элементарных электрических цепей </span>
+                </div>
+                <div class="icon-adv-item">
+                    <svg style="width: 160px;"><use xlink:href="#icon__rhombus"></use></svg>    <!-- Cube background Icon -->
+                    <span> Профессиональное 3D проектирование </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-4">
+        <div class="container">
+            <h1 class="txt-size-bg txt-font-regular align-center-h"> Оснащение класса </h1>
+            <div class="slider-block flex ">
+                <img class="slide-item active" draggable="false" src="static/page1/slide-1.png" alt="Ноутбук">
+                <img class="slide-item" draggable="false" src="static/page1/slide-2.png" alt="Робот">
+                <img class="slide-item" draggable="false" src="static/page1/slide-3.jpg" alt="Станок">
+                <img class="slide-item" draggable="false" src="static/page1/slide-4.png" alt="Комната">
             </div>
         </div>
     </section>
