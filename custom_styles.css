@@ -167,6 +167,8 @@ body {
 .content-space-between {justify-content: space-between;} .content-space-evenly {justify-content: space-evenly;} .content-space-around {justify-content: space-around;}
 .align-center-v {align-items: center;} .align-center-h {text-align: center;}
 .align-left {text-align: left;} .align-right {text-align: right;}
+
+.none {display: none;} .hide {visibility:hidden; position: absolute;} .show {visibility: visible; position: static; }
 /*&&&&&&&&&&&&&&&&&&&&*/
 
 /* Nav Panel */
