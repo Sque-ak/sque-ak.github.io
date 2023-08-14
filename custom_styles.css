@@ -168,7 +168,7 @@ body {
 .align-center-v {align-items: center;} .align-center-h {text-align: center;}
 .align-left {text-align: left;} .align-right {text-align: right;}
 
-.none {display: none;} .hide {visibility:hidden; position: absolute;} .show {visibility: visible; position: static; }
+.none {display: none;} .hide {visibility:hidden; width:0px; height:0px;} .show {visibility: visible; width:auto; height:auto; }
 /*&&&&&&&&&&&&&&&&&&&&*/
 
 /* Nav Panel */
